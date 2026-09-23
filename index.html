@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PasswordGuard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo">🔐</div>
+
+        <div>
+            <h1>PasswordGuard</h1>
+            <p>Password Security Analyzer</p>
+        </div>
+    </header>
+
+
+    <div class="card">
+
+        <h2>Check Your Password</h2>
+
+        <p class="description">
+            Check your password for common security weaknesses.
+        </p>
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+            >
+
+            <button id="togglePassword">
+                👁
+            </button>
+
+        </div>
+
+        <button
+            class="analyze-button"
+            onclick="checkPassword()"
+        >
+            🛡️ Analyze Password
+        </button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2> Security Score</h2>
+
+        <div id="score">
+            0/100
+        </div>
+
+        <div class="progress-container">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+        <div id="strength">
+            Enter a password to begin
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2> Security Analysis</h2>
+
+        <ul id="analysis">
+
+            <li>
+                Detective mode activated examining your password .
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Recommendations</h2>
+
+        <ul id="recommendations">
+
+                <li>
+     Let’s give your password a security makeover! 🔧
+</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="tip">
+
+        <h2>Security Tip</h2>
+
+        <p>
+           Go long, stay unique, and avoid common words, repeats, and easy patterns.
+        </p>
+
+    </div>
+
+
+    <footer>
+
+        our password stays private we analyze it right in your browser.
+
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

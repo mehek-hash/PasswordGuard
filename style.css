@@ -1,0 +1,754 @@
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #1b3045, transparent 35%),
+        radial-gradient(circle at bottom right, #173d35, transparent 35%),
+        #05080c;
+
+    color: #eaf2f8;
+    min-height: 100vh;
+}
+
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 750px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 48px;
+    animation: lockDance 2s infinite ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-size: 34px;
+
+    color: #6ee7b7;
+
+    animation: titleDance 3s infinite ease-in-out;
+}
+
+header p {
+    margin: 6px 0;
+
+    font-family: "Trebuchet MS", sans-serif;
+    color: #a9b7c5;
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.card {
+    background: rgba(17, 26, 35, 0.95);
+
+    border: 1px solid #294052;
+    border-radius: 18px;
+
+    padding: 25px;
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    animation: cardDance 1s ease;
+}
+
+
+/* Different card effects */
+
+.card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+
+/* =========================
+   CHECK YOUR PASSWORD
+   ========================= */
+
+.card:nth-of-type(1) h2 {
+    font-family: Georgia, serif;
+
+    color: #64d8cb;
+
+    animation: headingBounce 2.5s infinite ease-in-out;
+}
+
+
+/* =========================
+   SECURITY SCORE
+   ========================= */
+
+.card:nth-of-type(2) h2 {
+    font-family: "Trebuchet MS", sans-serif;
+
+    color: #ffd166;
+
+    animation: headingFloat 2.8s infinite ease-in-out;
+}
+
+
+/* =========================
+   SECURITY ANALYSIS
+   ========================= */
+
+.card:nth-of-type(3) h2 {
+    font-family: "Courier New", monospace;
+
+    color: #ff8fab;
+
+    animation: headingShake 3s infinite ease-in-out;
+}
+
+
+/* =========================
+   RECOMMENDATIONS
+   ========================= */
+
+.card:nth-of-type(4) h2 {
+    font-family: Georgia, serif;
+
+    color: #8ec5ff;
+
+    animation: headingWave 3s infinite ease-in-out;
+}
+
+
+/* CARD TEXT */
+
+.card h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.description {
+    color: #aab7c4;
+    font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PASSWORD BOX
+   ========================= */
+
+.password-box {
+    display: flex;
+
+    background: #080e14;
+
+    border: 1px solid #385268;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    margin-top: 20px;
+
+    transition: 0.3s;
+}
+
+.password-box:focus-within {
+    border-color: #6ee7b7;
+
+    box-shadow:
+        0 0 18px rgba(110, 231, 183, 0.25);
+
+    transform: scale(1.01);
+}
+
+.password-box input {
+    flex: 1;
+
+    padding: 15px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+.password-box input::placeholder {
+    color: #687786;
+}
+
+.password-box button {
+    width: 60px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #b8c5d0;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.password-box button:hover {
+    color: #6ee7b7;
+
+    transform:
+        rotate(10deg)
+        scale(1.2);
+}
+
+
+/* =========================
+   ANALYZE BUTTON
+   ========================= */
+
+.analyze-button {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #16805c,
+            #22a879,
+            #16805c
+        );
+
+    background-size: 200% 100%;
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    animation: buttonGlow 3s infinite;
+}
+
+.analyze-button:hover {
+    transform:
+        translateY(-3px)
+        scale(1.01);
+
+    box-shadow:
+        0 8px 25px rgba(47, 167, 122, 0.35);
+}
+
+.analyze-button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   SECURITY SCORE
+   ========================= */
+
+#score {
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+    font-weight: bold;
+
+    color: #ffd166;
+
+    margin: 18px;
+
+    animation: scoreDance 2s infinite ease-in-out;
+}
+
+
+/* =========================
+   PROGRESS BAR
+   ========================= */
+
+.progress-container {
+    width: 100%;
+
+    height: 18px;
+
+    background: #070b10;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #293b4a;
+}
+
+#progressBar {
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff6b6b,
+            #ffd166,
+            #6ee7b7
+        );
+
+    border-radius: 20px;
+
+    transition:
+        width 0.8s ease-in-out;
+
+    box-shadow:
+        0 0 12px rgba(110, 231, 183, 0.4);
+}
+
+
+/* =========================
+   STRENGTH
+   ========================= */
+
+#strength {
+    text-align: center;
+
+    font-family: "Trebuchet MS", sans-serif;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-top: 15px;
+
+    color: #a9b7c5;
+
+    animation: strengthDance 2.5s infinite ease-in-out;
+}
+
+
+/* =========================
+   LISTS
+   ========================= */
+
+li {
+    margin: 14px 0;
+
+    line-height: 1.6;
+
+    color: #d5dee6;
+
+    font-family: "Trebuchet MS", sans-serif;
+
+    transition: 0.3s;
+}
+
+li:hover {
+    color: white;
+
+    transform: translateX(6px);
+}
+
+
+/* Analysis list */
+
+#analysis li {
+    animation: listSlide 0.7s ease forwards;
+}
+
+
+/* Recommendations list */
+
+#recommendations li {
+    animation: listBounce 0.8s ease forwards;
+}
+
+
+/* =========================
+   SECURITY TIP
+   ========================= */
+
+.tip {
+    background:
+        linear-gradient(
+            135deg,
+            #12231f,
+            #162c27,
+            #10201d
+        );
+
+    border-left: 5px solid #6ee7b7;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+
+    animation: tipDance 3s infinite ease-in-out;
+}
+
+.tip h2 {
+    font-family: Georgia, serif;
+
+    color: #6ee7b7;
+
+    animation: tipHeading 2.5s infinite ease-in-out;
+}
+
+.tip p {
+    color: #b8c5d0;
+
+    line-height: 1.7;
+
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+
+    color: #687786;
+
+    padding: 15px;
+
+    font-size: 13px;
+
+    font-family: "Courier New", monospace;
+
+    animation: footerFade 3s infinite ease-in-out;
+}
+
+
+/* ==================================================
+   ANIMATIONS
+   ================================================== */
+
+
+/* Lock dancing */
+
+@keyframes lockDance {
+
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(-8deg) scale(1.08);
+    }
+
+    50% {
+        transform: rotate(8deg) scale(1.12);
+    }
+
+    75% {
+        transform: rotate(-5deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+/* Main title */
+
+@keyframes titleDance {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Cards appearing */
+
+@keyframes cardDance {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Heading bounce */
+
+@keyframes headingBounce {
+
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+
+/* Score heading */
+
+@keyframes headingFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+/* Analysis heading */
+
+@keyframes headingShake {
+
+    0%, 90%, 100% {
+        transform: rotate(0deg);
+    }
+
+    93% {
+        transform: rotate(-3deg);
+    }
+
+    96% {
+        transform: rotate(3deg);
+    }
+}
+
+
+/* Recommendation heading */
+
+@keyframes headingWave {
+
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+}
+
+
+/* Score */
+
+@keyframes scoreDance {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+
+/* Strength */
+
+@keyframes strengthDance {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* Button */
+
+@keyframes buttonGlow {
+
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* Analysis list */
+
+@keyframes listSlide {
+
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Recommendation list */
+
+@keyframes listBounce {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(15px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Security tip */
+
+@keyframes tipDance {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* Security tip heading */
+
+@keyframes tipHeading {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+
+/* Footer */
+
+@keyframes footerFade {
+
+    0%, 100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 21px;
+    }
+
+    #score {
+        font-size: 40px;
+    }
+
+    #strength {
+        font-size: 19px;
+    }
+
+    .analyze-button {
+        font-size: 16px;
+    }
+}
